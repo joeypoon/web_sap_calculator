@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Institutional gpa:</strong>
+  <%= @student.institutional_gpa %>
+</p>
+
+<p>
+  <strong>Institutional credits:</strong>
+  <%= @student.institutional_credits %>
+</p>
+
+<p>
+  <strong>Total earned credits:</strong>
+  <%= @student.total_earned_credits %>
+</p>
+
+<p>
+  <strong>Total attempted credits:</strong>
+  <%= @student.total_attempted_credits %>
+</p>
+
+
+
+<%= link_to 'New Calculation', students_path %>

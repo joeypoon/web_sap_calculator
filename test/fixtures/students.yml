@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  institutional_gpa: 1.5
+  institutional_credits: 1.5
+  total_earned_credits: 1.5
+  total_attempted_credits: 1.5
+
+two:
+  institutional_gpa: 1.5
+  institutional_credits: 1.5
+  total_earned_credits: 1.5
+  total_attempted_credits: 1.5
