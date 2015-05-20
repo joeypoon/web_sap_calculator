@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(student_params)
-    redirect_to students_url
+    render :show
     # respond_to do |format|
     #   if @student.save
     #     format.html { redirect_to @student, notice: 'Student was successfully created.' }

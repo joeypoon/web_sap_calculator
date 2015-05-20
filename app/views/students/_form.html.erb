@@ -1,34 +1,26 @@
-<%= form_for(@student) do |f| %>
-  <!-- <% if @student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+  <div class = "container col-md-4 col-md-offset-4">
+    <%= form_for(@student) do |f| %>
 
-      <ul>
-      <% @student.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %> -->
+      <h3 class = "margin_bottom">GPA</h3>
 
-  <h3>GPA</h3>
+      <div class="field">
+        <%= f.number_field :institutional_gpa, placeholder: "Institutional GPA", :step => 0.01, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.number_field :institutional_credits, placeholder: "Institutional Credits", :step => 0.01, class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= f.number_field :institutional_gpa, placeholder: "Institutional GPA", :step => 0.01 %>
-  </div>
-  <div class="field">
-    <%= f.number_field :institutional_credits, placeholder: "Institutional Credits", :step => 0.01 %>
-  </div>
+      <h3 class = "margin_bottom">Completion Percentage</h3>
 
-  <h3>Completion Percentage</h3>
+      <div class="field">
+        <%= f.number_field :total_earned_credits, placeholder: "Total Earned Credits", :step => 0.01, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.number_field :total_attempted_credits, placeholder: "Total Attempted Credits", :step => 0.01, class: "form-control" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Calculate", class: "btn btn-lg btn-success" %>
+      </div>
 
-  <div class="field">
-    <%= f.number_field :total_earned_credits, placeholder: "Total Earned Credits", :step => 0.01 %>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.number_field :total_attempted_credits, placeholder: "Total Attempted Credits", :step => 0.01 %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Calculate" %>
-  </div>
-<% end %>

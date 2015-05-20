@@ -1,3 +1,4 @@
+<div class = "center margin_top">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,6 +21,17 @@
   <%= @student.total_attempted_credits %>
 </p>
 
+<hr>
 
+<p>
+  <strong>Credits needed to reach <%= @student.min_gpa %> if student makes all B's (Half if all A's):</strong>
+  <%= @student.credits_needed_for_min_gpa %>
+</p>
 
-<%= link_to 'New Calculation', students_path %>
+<p>
+  <strong>Credits needed to reach <%= (@student.min_phrs * 100) %> percent:</strong>
+  <%= @student.credits_needed_for_min_phrs %>
+</p>
+
+<%= link_to 'New Calculation', new_student_path %>
+</div>
