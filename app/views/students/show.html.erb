@@ -1,37 +1,39 @@
-<div class = "center margin_top">
-<p id="notice"><%= notice %></p>
+<div class = "container center margin_top col-md-4 col-md-offset-4">
+  <div id = "show_calc">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Institutional gpa:</strong>
-  <%= @student.institutional_gpa %>
-</p>
+    <p>
+      <strong>Institutional GPA:</strong>
+      <span class = "result"><%= @student.institutional_gpa %></span>
+    </p>
 
-<p>
-  <strong>Institutional credits:</strong>
-  <%= @student.institutional_credits %>
-</p>
+    <p>
+      <strong>Institutional Credits:</strong>
+      <span class = "result"><%= @student.institutional_credits %></span>
+    </p>
 
-<p>
-  <strong>Total earned credits:</strong>
-  <%= @student.total_earned_credits %>
-</p>
+    <p>
+      <strong>Total Earned Credits:</strong>
+      <span class = "result"><%= @student.total_earned_credits %></span>
+    </p>
 
-<p>
-  <strong>Total attempted credits:</strong>
-  <%= @student.total_attempted_credits %>
-</p>
+    <p>
+      <strong>Total Attempted Credits:</strong>
+      <span class = "result"><%= @student.total_attempted_credits %></span>
+    </p>
 
-<hr>
+    <hr>
 
-<p>
-  <strong>Credits needed to reach <%= @student.min_gpa %> if student makes all B's (Half if all A's):</strong>
-  <%= @student.credits_needed_for_min_gpa %>
-</p>
+    <p>
+      <strong>Credits needed to reach <%= @student.min_gpa %> if student makes all B's (Half if all A's):</strong>
+      <span class = "result"><%= @student.credits_needed_for_min_gpa %></span>
+    </p>
 
-<p>
-  <strong>Credits needed to reach <%= (@student.min_phrs * 100) %> percent:</strong>
-  <%= @student.credits_needed_for_min_phrs %>
-</p>
+    <p>
+      <strong>Credits needed to reach <%= (@student.min_phrs * 100) %> percent:</strong>
+      <span class = "result"><%= @student.credits_needed_for_min_phrs %></span>
+    </p>
 
-<%= link_to 'New Calculation', new_student_path %>
+    <%= link_to 'New Calculation', new_student_path, class: "btn btn-md btn-success", id: "new_button" %>
+  </div>
 </div>

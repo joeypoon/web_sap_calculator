@@ -17,3 +17,24 @@
 .btn {
   margin-top: .5em;
 }
+
+#new_button {
+  color: white;
+}
+
+#main_form {
+  border: 2px solid rgba(39, 174, 96, 7.0);
+  border-radius: 7px;
+  padding: 2em 3em;
+}
+
+#show_calc {
+  border: 2px solid rgba(39, 174, 96, 7.0);
+  border-radius: 7px;
+  padding: 2em 3em;
+}
+
+.result {
+  color: #C0392B;
+  font-weight: bold;
+}
