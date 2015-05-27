@@ -15,3 +15,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+
+  $("#popup").hide();
+  //
+  // $(".btn").click(function() {
+  //   $("#popup").show();
+  // });
+
+});

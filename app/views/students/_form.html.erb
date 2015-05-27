@@ -5,23 +5,25 @@
     <h3 class = "margin_bottom">GPA</h3>
 
     <div class="field">
-      <%= f.number_field :institutional_gpa, placeholder: "Institutional GPA", :step => 0.01, class: "form-control" %>
+      <%= f.number_field :institutional_gpa, placeholder: "Institutional GPA", :step => 0.01, max: 4, min: 0, class: "form-control" %>
     </div>
     <div class="field">
-      <%= f.number_field :institutional_credits, placeholder: "Institutional Credits", :step => 0.01, class: "form-control" %>
+      <%= f.number_field :institutional_credits, placeholder: "Institutional Credits", :step => 0.01, min: 0, class: "form-control" %>
     </div>
 
     <h3 class = "margin_bottom">Completion Percentage</h3>
 
     <div class="field">
-      <%= f.number_field :total_earned_credits, placeholder: "Total Earned Credits", :step => 0.01, class: "form-control" %>
+      <%= f.number_field :total_earned_credits, placeholder: "Total Earned Credits", :step => 0.01, min: 0, class: "form-control" %>
     </div>
     <div class="field">
-      <%= f.number_field :total_attempted_credits, placeholder: "Total Attempted Credits", :step => 0.01, class: "form-control" %>
+      <%= f.number_field :total_attempted_credits, placeholder: "Total Attempted Credits", :step => 0.01, min: 0, class: "form-control" %>
     </div>
-    <div class="actions">
+    <!-- <div class="actions">
       <%= f.submit "Calculate", class: "btn btn-lg btn-success" %>
-    </div>
+    </div> -->
+
+    <button class="btn btn-lg btn-success">Calculate</button>
 
   <% end %>
 

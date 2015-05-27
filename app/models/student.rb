@@ -1,11 +1,19 @@
+require 'pry'
 class Student < ActiveRecord::Base
   attr_reader :min_gpa, :min_phrs
 
   def initialize *args
     super
     @min_gpa = 2.0
-    @min_phrs = 0.73
-    calculate_sap(args.first) unless args.empty?
+    @min_phrs = 0.725
+    if args.empty?
+      @institutional_gpa = 0
+      @institutional_credits = 0
+      @total_earned_credits = 0
+      @total_attempted_credits = 0
+    else
+      calculate_sap(args.first)
+    end
   end
 
   def calculate_sap args
@@ -24,7 +32,7 @@ class Student < ActiveRecord::Base
   end
 
   def credits_needed_for_min_phrs
-    if (@total_earned_credits / @total_attempted_credits) >= min_phrs
+    if @total_attempted_credits == 0 || ((@total_earned_credits / @total_attempted_credits) >= min_phrs)
       0
     else
       credits_needed_for_phrs
