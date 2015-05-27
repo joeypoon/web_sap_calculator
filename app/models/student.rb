@@ -1,4 +1,3 @@
-require 'pry'
 class Student < ActiveRecord::Base
   attr_reader :min_gpa, :min_phrs
 
