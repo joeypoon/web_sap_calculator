@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>SAP Calculator</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="http://oss.maxcdn.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <h2 class="page-header"><small>UHD</small> SAP Calculator</h2>
+
+    <div class="col-md-8" style="margin-bottom: 1.5em;">
+
+      <form>
+        <div class="form-group">
+          <label for="institutional_gpa">Institutional GPA</label>
+          <input type="number" class="form-control" id="institutional_gpa" placeholder="ex. 3.75">
+        </div>
+        <div class="form-group">
+          <label for="institutional_credits">Institutional Attempted Credits</label>
+          <input type="number" class="form-control" id="institutional_credits" placeholder="ex. 48">
+        </div>
+
+        <div class="form-group">
+          <label for="total_earned_credits">Total Earned Credits</label>
+          <input type="number" class="form-control" id="total_earned_credits" placeholder="ex. 60">
+        </div>
+        <div class="form-group">
+          <label for="total_attempted_credits">Total Attempted Credits</label>
+          <input type="number" class="form-control" id="total_attempted_credits" placeholder="ex. 72">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="calculate">Calculate</button>
+      </form>
+    </div>
+
+    <table class="table table-striped table-bordered">
+      <th>
+        Minimum credits needed to reach 2.0 GPA if all B's (Half if all A's)
+      </th>
+      <th>
+        Minimum credits needed to reach 72.5% completion
+      </th>
+      <tr>
+        <td id="minimum_credits_for_gpa">0</td>
+        <td id="minimum_credits_for_completion">0</td>
+      </tr>
+    </table>
+
+  </div>
+
+</body>
+</html>
